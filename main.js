@@ -10,7 +10,7 @@ $(document).ready(function() {
     $('form').on('submit', function(e) {
         e.preventDefault();
         const enderecoNovaImagem = $('#endereco-imagem').val();
-        const novoItem = $('<li></li>');
+        const novoItem = $('<li style="display: none"></li>');
         $(`<img src="${enderecoNovaImagem}" />`).appendTo(novoItem);
         $(`
             <div class="overley-link">
@@ -20,6 +20,7 @@ $(document).ready(function() {
             </div>
         `).appendTo(novoItem);
         $(novoItem).appendTo('ul');
+        $(novoItem).fadeIn(1000);
         $('#endereco-imagem').val('')
     })
 })  
