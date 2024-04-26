@@ -9,7 +9,7 @@ $(document).ready(function() {
 
     $('form').on('submit', function(e) {
         e.preventDefault();
-        const enderecoNovaImagem = $('#endereço-imagem').val();
+        const enderecoNovaImagem = $('#endereco-imagem').val();
         const novoItem = $('<li></li>');
         $(`<img src="${enderecoNovaImagem}" />`).appendTo(novoItem);
         $(`
